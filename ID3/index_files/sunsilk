@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Sunsilk';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Sunsilk'), url('https://fonts.cdnfonts.com/s/100192/Sunsilk-BF649aed5753694.woff') format('woff');
+}
+
+

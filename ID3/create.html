@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Undangan Kamu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Styles shortened for brevity */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ff9a9e 0%, #fad0c4 100%);
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            text-shadow: 3px 3px 5px rgba(216, 88, 228, 0.568);
+            margin-bottom: 20px;
+            color: #fff8f0;
+        }
+
+        h3 {
+            text-shadow: 3px 3px 5px rgba(226, 18, 18, 0.568);
+            color: #fff8f0;
+            text-align: left;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: 600;
+            margin: 10px 0 5px;
+            color: hsl(0, 0%, 91%);
+            text-shadow: 3px 3px 5px rgba(216, 88, 228, 0.568);
+        }
+
+        input,
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 12px 25px;
+            background: linear-gradient(to right, #ff512f, #dd2476);
+            border: none;
+            border-radius: 30px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #422f2f6e;
+            text-shadow: 3px 3px 5px rgba(216, 88, 228, 0.568);
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 15px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            input,
+            textarea {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+
+            footer {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h3>NO.ID 3</h3>
+    <h1>Create Undangan Kamu</h1>
+
+    <div class="form-container">
+        <form id="editForm">
+            <label for="text">nama tujuan</label>
+            <textarea id="text" placeholder="exp: Kepada Ibu/Bpk Edy"></textarea>
+
+            <label for="aca-fun-h1-id1">Nama Mempelai Laki & Perempuan</label>
+            <input type="text" id="aca-fun-h1-id1" placeholder="exp: Edy & Cindy">
+
+            <button type="submit">Buat link</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Dibuat oleh Edy | Cindy</p>
+    </footer>
+
+    <script>
+        document.getElementById('editForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Ambil nilai input
+            const text = encodeURIComponent(document.getElementById('text').value);
+            const acafunh1id1 = encodeURIComponent(document.getElementById('aca-fun-h1-id1').value);
+
+            // Buat link dengan parameter
+            const link = `https://cindy-edy.github.io/undangan/ID3/index.html?` +
+                `text=${text}&aca-fun-h1-id1=${acafunh1id1}`;
+            // Tampilkan notifikasi
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil!',
+                html: `Salin tautan di bawah ini:<br><a href="${link}" target="_blank">${link}</a>`,
+                confirmButtonColor: '#36d1dc',
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
