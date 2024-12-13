@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kehadiran</title>
+    <style>
+        /* untuk pesan */
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #89f7fe, #66a6ff);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            width: 93%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #66a6ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+        }
+
+        button:hover {
+            background-color: #559af0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #66a6ff;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .text-highlight {
+            font-weight: bold;
+        }
+
+        #notif {
+            display: none;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+            animation: fadeInOut 3s forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .form-container {
+            font-size: 1.5rem;
+            background-image: url('img/EG-Box1.WEBP');
+            background-size: cover;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px auto;
+            width: 600px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.5rem;
+
+        }
+
+        .container  {
+            margin-top: 20px;
+            align-items: center;
+                       
+        }
+
+        .table-container {
+            font-size: 1.2rem;
+            width: 100%;
+            background-color: #fff;
+            background-image: url('img/EG-Box1.WEBP');
+            background-size: cover;
+            padding: 2px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 0.8rem;
+        }
+
+        label {
+            font-weight: bold;
+            color: #121213;
+        }
+
+        .text-header {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #6c5ce7;
+        }
+
+        .text-highlight {
+            font-weight: bold;
+            color: rgb(31, 32, 32);
+        }
+
+        /* Responsif untuk layar kecil */
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+
+            h1,
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .form-container,
+            .table-container {
+                padding: 15px;
+            }
+
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- PESAN -->
+    <div class="form-container">
+        <h2 class="text-center">Form Kehadiran</h2>
+        <form id="attendanceForm">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="ucapan">Ucapan:</label>
+                <textarea id="ucapan" name="ucapan" class="form-control" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="hadir">Kehadiran:</label>
+                <select id="hadir" name="hadir" class="form-control" required>
+                    <option value="">Pilih Kehadiran</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Tidak Hadir</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+        </form>
+        <div id="notif" class="alert alert-success mt-3" style="display: none;">Data berhasil dikirim!</div>
+    </div>
+    <div class="container">
+        <h2 class="text-center mb-4">Data Kehadiran</h2>        
+        <div class="table-container">
+            <span id="totalUcapan" class="total-ucapan-ucapan">🔵 0 Total
+                Ucapan</span><br>
+            <span id="totalHadir" class="total-hadir-ucapan">🟢 0 Orang
+                Menyatakan Hadir</span>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Nama</th>
+                        <th>Ucapan</th>
+                        <th>Kehadiran</th>
+                    </tr>
+                </thead>
+                <tbody id="dataBody">
+                    <!-- Data akan muncul di sini -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer style=" font-size: 1rem; ; color: white; text-align: center; padding: 10px; margin-top: 20px;">
+        <p>© 2024 Buku Kehadiran by Edy & Cindy</p>
+    </footer>
+    <script>
+        document.getElementById("attendanceForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nama = document.getElementById("nama").value;
+            const ucapan = document.getElementById("ucapan").value;
+            const hadir = document.getElementById("hadir").value;
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbybLYFl1Vzx_TSLf1ZoSGZHuqz2dzGBmYNZJxaN8B5zVFRwtOH9vfQMVEOSQbFsB0OL/exec"; // Replace with your Apps Script URL
+            const formData = new FormData();
+            formData.append("nama", nama);
+            formData.append("ucapan", ucapan);
+            formData.append("hadir", hadir);
+
+            fetch(scriptURL, { method: "POST", body: formData })
+                .then(response => {
+                    document.getElementById("notif").style.display = "block";
+                    document.getElementById("attendanceForm").reset();
+                })
+                .catch(error => console.error("Error!", error.message));
+        });
+
+        const fetchData = () => {
+            const scriptURL = "https://script.google.com/macros/s/AKfycbybLYFl1Vzx_TSLf1ZoSGZHuqz2dzGBmYNZJxaN8B5zVFRwtOH9vfQMVEOSQbFsB0OL/exec"; // Replace with your Apps Script URL
+            fetch(scriptURL)
+                .then(response => response.json())
+                .then(data => {
+                    let totalUcapan = 0;
+                    let totalHadir = 0;
+
+                    data.forEach(row => {
+                        totalUcapan += 1;
+                        if (row.hadir === "Hadir") {
+                            totalHadir += 1;
+                        }
+                    });
+
+                    // Update elemen HTML
+                    document.getElementById("totalUcapan").textContent = `🔵 ${totalUcapan} Total Ucapan`;
+                    document.getElementById("totalHadir").textContent = `🟢 ${totalHadir} Orang Menyatakan Hadir`;
+
+                    const tableBody = document.getElementById("dataBody");
+                    tableBody.innerHTML = ""; // Kosongkan tabel sebelum menambahkan data baru
+
+                    data.forEach(row => {
+                        const waktu = formatTimeAgo(new Date(row.timestamp)); // Format waktu relatif
+                        const newRow = `
+                        <tr>
+                            <td class="text-highlight">${waktu}</td>
+                            <td>${row.nama}</td>
+                            <td>${row.ucapan}</td>
+                            <td>${row.hadir}</td>
+                        </tr>
+                    `;
+                        tableBody.innerHTML += newRow;
+                    });
+                })
+                .catch(error => console.error("Error fetching data:", error));
+        };
+
+        // Fungsi untuk menghitung waktu relatif
+        const formatTimeAgo = (date) => {
+            const now = new Date();
+            const secondsAgo = Math.floor((now - date) / 1000);
+
+            if (secondsAgo < 60) return "Baru saja";
+            const minutesAgo = Math.floor(secondsAgo / 60);
+            if (minutesAgo < 60) return `${minutesAgo} menit yang lalu`;
+            const hoursAgo = Math.floor(minutesAgo / 60);
+            if (hoursAgo < 24) return `${hoursAgo} jam yang lalu`;
+            const daysAgo = Math.floor(hoursAgo / 24);
+            if (daysAgo < 7) return `${daysAgo} hari yang lalu`;
+            const weeksAgo = Math.floor(daysAgo / 7);
+            if (weeksAgo < 4) return `${weeksAgo} minggu yang lalu`;
+            return date.toLocaleDateString(); // Tanggal penuh jika lebih dari 1 bulan
+        };
+
+        // Muat data pertama kali
+        fetchData();
+
+        // Perbarui data setiap 5 detik
+        setInterval(fetchData, 5000);
+    </script>
+</body>
+
+</html>
