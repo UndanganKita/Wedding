@@ -108,7 +108,20 @@
             .container {
                 max-height: 100%;
             }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+
+            input, textarea {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
         }
+       
     </style>
 </head>
 <body>
@@ -121,18 +134,23 @@
                 <img class="icon" src="https://img.icons8.com/ios-filled/50/000000/books.png" alt="Icon">
             </div>
             <div class="form-group">
+                <label for="harga">Harga Paket</label>
+                <input type="text" id="harga" name="harga" placeholder="Harga Paket Undangan" required>
+                <img class="icon" src="https://img.icons8.com/ios-filled/50/000000/books.png" alt="Icon">
+            </div>
+            <div class="form-group">
                 <label for="coupleName">Nama Kedua Pengantin</label>
                 <input type="text" id="coupleName" name="coupleName" placeholder="Nama Pengantin..." required>
                 <img class="icon" src="https://img.icons8.com/ios-filled/50/000000/bride.png" alt="Icon">
             </div>
             <div class="form-group">
-                <label for="fatherName">Nama Kedua Orang Tua Laki-Laki</label>
-                <input type="text" id="fatherName" name="fatherName" placeholder="Nama Kedua Orang Tua..." required>
+                <label for="ortupria">Nama Kedua Orang Tua Laki-Laki</label>
+                <input type="text" id="ortupria" name="ortupria" placeholder="Nama Kedua Orang Tua..." required>
                 <img class="icon" src="https://img.icons8.com/ios-filled/50/000000/family.png" alt="Icon">
             </div>
             <div class="form-group">
-                <label for="motherName">Nama Kedua Orang Tua Perempuan</label>
-                <input type="text" id="motherName" name="motherName" placeholder="Nama Kedua Orang Tua..." required>
+                <label for="ortuwanita">Nama Kedua Orang Tua Perempuan</label>
+                <input type="text" id="ortuwanita" name="ortuwanita" placeholder="Nama Kedua Orang Tua..." required>
                 <img class="icon" src="https://img.icons8.com/ios-filled/50/000000/family.png" alt="Icon">
             </div>
             <div class="form-group">
@@ -172,9 +190,10 @@
     <script>
         function sendData() {
             const idtema = document.getElementById('idtema').value;
+            const harga = document.getElementById('harga').value;
             const coupleName = document.getElementById('coupleName').value;
-            const fatherName = document.getElementById('fatherName').value;
-            const motherName = document.getElementById('motherName').value;
+            const ortupria = document.getElementById('ortupria').value;
+            const ortuwanita = document.getElementById('ortuwanita').value;
             const reception = document.getElementById('reception').value;
             const akad = document.getElementById('akad').value;
             const story = document.getElementById('story').value;
@@ -184,15 +203,16 @@
 
             const message = `Buat Undangan Kamu:%0A%0A` +
                 `🎉 Nomor ID Undangan: ${idtema}%0A` +
+                `💳 Harga Paket Undangan: ${harga}` +
                 `🌸 Nama Pengantin: ${coupleName}%0A` +
-                `👨 Nama Ayah: ${fatherName}%0A` +
-                `👩 Nama Ibu: ${motherName}%0A` +
+                `👨 Nama Kedua Orang Tua: ${ortupria}%0A` +
+                `👩 Nama Kedua Orang Tua: ${ortuwanita}%0A` +
                 `📅 Resepsi: ${reception}%0A` +
                 `⏰ Akad: ${akad}%0A` +
                 `📖 Cerita: ${story}%0A` +
-                `💳 Rekening: ${account}`; +
+                `💳 Rekening: ${account}` +
                 `📖 Agama: ${religion}%0A` +
-                `📖 Doa: ${doa}%0A` +
+                `📖 Doa: ${doa}%0A`;
 
             const whatsappUrl = `https://wa.me/6283111823312?text=${message}`;
             window.open(whatsappUrl, '_blank');
