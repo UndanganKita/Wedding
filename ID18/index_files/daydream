@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Daydream';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Daydream'), url('https://fonts.cdnfonts.com/s/16934/daydream dafont free.woff') format('woff');
+}
+
+

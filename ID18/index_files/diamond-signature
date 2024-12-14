@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Diamond Signature';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Diamond Signature'), url('https://fonts.cdnfonts.com/s/74385/DiamondSignature-Regular.woff') format('woff');
+}
+
+
