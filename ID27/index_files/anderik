@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Anderik';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Anderik'), url('https://fonts.cdnfonts.com/s/58527/Anderik.woff') format('woff');
+}
+
+
