@@ -8,10 +8,8 @@
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(45deg, #f37474, #fad0c4, #fbc2eb, #437fe0);
-            background-size: 400% 400%;
+            background-size: 350% 350%;
             animation: gradientBG 8s ease infinite;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,11 +28,11 @@
             width: 90%;
             max-width: 500px;
             background: rgba(255, 255, 255, 0.466);
-            padding: 20px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0px 4px 15px rgba(1, 162, 255, 0.87);
             overflow-y: auto;
-            max-height: 90%;
+            max-height: 75%;
         }
 
         h1 {
@@ -106,7 +104,7 @@
             }
 
             .container {
-                max-height: 90%;
+                max-height: 100%;
             }
             
             h1 {
@@ -201,9 +199,9 @@
             const religion = document.getElementById('religion').value;
             const doa = document.getElementById('doa').value;
 
-            const message = `BUAT UNDANGAN KAMU%0A%0A` +
+            const message = `Buat Undangan Kamu:%0A%0A` +
                 `🎉 Nomor ID Undangan: ${idtema}%0A` +
-                `💳 Harga Paket Undangan: ${harga}%0A` +
+                `💳 Harga Paket Undangan: ${harga}` +
                 `🌸 Nama Pengantin: ${coupleName}%0A` +
                 `👨 Nama Kedua Orang Tua: ${ortupria}%0A` +
                 `👩 Nama Kedua Orang Tua: ${ortuwanita}%0A` +
@@ -214,9 +212,8 @@
                 `📖 Agama: ${religion}%0A` +
                 `📖 Doa: ${doa}%0A`;
 
-            const whatsappUrl = `https://wa.me/6283111823312?text=${message}`;
+            const whatsappUrl = `https://wa.me/6283111823312?text=UndanganKita${message}`;
             window.open(whatsappUrl, '_blank');
-
            
         }
     </script>
