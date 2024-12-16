@@ -4240,10 +4240,10 @@
                     target="_blank" style="color: #2276b1 !important; font-weight: 400; font-size: 18px; text-shadow: 1px 1px 2px #005189;"
                     class="fun-p-122">save date</p></a>
                 <h1 id="awal-fun-h1-id1" style="margin-top: -5px; font-size: 65px; color: #005189; margin-left: -125px; font-weight: 400; letter-spacing: 1px; text-stroke: 1px #005189;
-                     -webkit-text-stroke: 1px #005189;" class="fun-h1-2">EDY</h1>
+                     -webkit-text-stroke: 1px #005189;" id="dari" class="fun-h1-2">EDY</h1>
                 <h1 id="awal-fun-h1-id11" style="font-size: 65px; margin-top: -25px; margin-left: 120px; color: #005189; font-weight: 400; letter-spacing: 1px; text-stroke: 1px #005189;
                     -webkit-text-stroke: 1px #005189;" class="fun-h1-3"><span style="font-size: 48px !important;"
-                        class="fun-span-120">&amp; </span>CINDY</h1>
+                        id="dan" class="fun-span-120">&amp; </span>CINDY</h1>
                 <div class="foto_sampul_cli fun-div-498">
                     <div id="bx2-ftb-div-id23" data-aos="zoom-in"
                         style="display: block; margin: 0 auto; margin-top: 30px; width: 230px; height: 230px; border-radius: 156px; overflow: hidden; background:url(&#39;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/theme/images/1659166691.jpeg&#39;); background-position: center; background-repeat: no-repeat; background-size: cover;"
@@ -4255,11 +4255,11 @@
                         alt="">
                     <br>
                 </div>
-                <p id="awal-fun-p-id1" style="color: #2276b1; font-size: 20px; text-shadow: 1px 1px 2px #2276b1;"
+                <p id="awal-fun-p-id1" style="color: #2276b1; font-size: 15px; text-shadow: 1px 1px 2px #2276b1;"
                     class="fun-p-123">
-                    Kepada bapak EDY</p>
-                <h4 style="color: #2276b1; font-size: 20px; text-shadow: 1px 1px 2px #2276b1;" id="kpdn"
-                    class="kpd fun-h4-0"></h4>
+                    Kepada:</p>
+                <h4 style="color: #2276b1; font-size: 20px; text-shadow: 1px 1px 2px #2276b1;" id="kepada"
+                    class="fun-p-123">bpk EDY</h4>
                 <button id="btn_open" class="button-black" style="margin: 0 auto;width: 60%;" type="button"
                     data-keyboard="false">
                     Buka Undangan </button>
@@ -7188,19 +7188,19 @@
     const params = getQueryParams();
 
     // Perbarui elemen di halaman berdasarkan query parameter
-    if (params["awal-fun-p-id1"]) {
-        const tujuanElement = document.getElementById("awal-fun-p-id1");
-        if (tujuanElement) tujuanElement.textContent = params["awal-fun-p-id1"];
+    if (params["kepada"]) {
+        const tujuanElement = document.getElementById("kepada");
+        if (tujuanElement) tujuanElement.textContent = params["kepada"];
     }
 
-    if (params["awal-fun-h1-id1"]) {
-        const namaLakiElement = document.getElementById("awal-fun-h1-id1");
-        if (namaLakiElement) namaLakiElement.textContent = params["awal-fun-h1-id1"];
+    if (params["dari"]) {
+        const namaLakiElement = document.getElementById("dari");
+        if (namaLakiElement) namaLakiElement.textContent = params["dari"];
     }
 
-    if (params["awal-fun-h1-id11"]) {
-        const namaPerempuanElement = document.getElementById("awal-fun-h1-id11");
-        if (namaPerempuanElement) namaPerempuanElement.textContent = params["awal-fun-h1-id11"];
+    if (params["dan"]) {
+        const namaPerempuanElement = document.getElementById("dan");
+        if (namaPerempuanElement) namaPerempuanElement.textContent = params["dan"];
     }
 
    
