@@ -70,6 +70,41 @@
       text-align: center;
       color: red;
     }
+     /* Optimasi untuk perangkat kecil */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+      .container {
+        padding: 15px;
+      }
+      .form-group input {
+        padding: 8px;
+        font-size: 14px;
+      }
+      button {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+
+    /* Tambahan untuk layar yang lebih besar */
+    @media (min-width: 768px) {
+      .container {
+        padding: 30px;
+      }
+      .form-group label {
+        font-size: 18px;
+      }
+      .form-group input {
+        padding: 12px;
+        font-size: 18px;
+      }
+      button {
+        padding: 12px;
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
