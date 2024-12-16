@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UndanganKita - Login & Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+    .container h1 {
+      margin: 0 0 20px;
+      font-size: 24px;
+      color: #6e8efb;
+      text-align: center;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .form-group input {
+      width: 93%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #6e8efb;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5671d4;
+    }
+    .toggle {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .toggle a {
+      color: #6e8efb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .message {
+      margin-top: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="form-title">Login</h1>
+    <form id="auth-form">
+      <div class="form-group" id="name-group" style="display: none;">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+      </div>
+      <button type="submit" id="submit-btn">Login</button>
+      <div class="message" id="message"></div>
+    </form>
+    <div class="toggle">
+      <span id="toggle-text">Belum punya akun?</span> <a href="#" id="toggle-link">Daftar di sini</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('auth-form');
+    const toggleLink = document.getElementById('toggle-link');
+    const formTitle = document.getElementById('form-title');
+    const nameGroup = document.getElementById('name-group');
+    const submitBtn = document.getElementById('submit-btn');
+    const messageDiv = document.getElementById('message');
+    let isSignup = false;
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzRBvZOqEu6p4FCiEj5PF5RI3z2wxDnp2Eqh8I50qmPPlib_WvTRnI16GTyjYuXD29m/exec'; // Replace with your script URL
+
+    toggleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      isSignup = !isSignup;
+      formTitle.textContent = isSignup ? 'Signup' : 'Login';
+      nameGroup.style.display = isSignup ? 'block' : 'none';
+      submitBtn.textContent = isSignup ? 'Signup' : 'Login';
+      toggleLink.textContent = isSignup ? 'Login di sini' : 'Daftar di sini';
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const action = isSignup ? 'signup' : 'login';
+
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new URLSearchParams({action, ...Object.fromEntries(formData)})
+      })
+        .then(response => response.json())
+        .then(data => {
+          messageDiv.textContent = data.message;
+          if (data.status === 'success' && !isSignup) {
+            alert(`Selamat Datang, ${data.name}!`);
+            window.location.href = "index.html";
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          messageDiv.textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+        });
+    });
+  </script>
+</body>
+</html>
