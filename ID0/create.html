@@ -127,8 +127,8 @@
 
     <div class="form-container">
         <form id="editForm">
-            <label for="awal-fun-p-id1">nama tujuan</label>
-            <textarea id="awal-fun-p-id1" placeholder="exmp: Kepada Ibu/Bpk Edy"></textarea>
+            <label for="kepada">nama tujuan</label>
+            <textarea id="kepada" placeholder="exmp: Ibu/Bpk Edy"></textarea>
 
             <label for="awal-fun-h1-id1">Nama Pengantin Laki</label>
             <input type="text" id="awal-fun-h1-id1" placeholder="exmp: EDY">
@@ -149,16 +149,16 @@
             e.preventDefault();
 
             // Ambil nilai input
-            const awalfunpid1 = encodeURIComponent(document.getElementById('awal-fun-p-id1').value);
-            const awalfunh1id1 = encodeURIComponent(document.getElementById('awal-fun-h1-id1').value);
-            const awalfunh1id11 = encodeURIComponent(document.getElementById('awal-fun-h1-id11').value);
+            const kepada = encodeURIComponent(document.getElementById('kepada').value);
+            const dari = encodeURIComponent(document.getElementById('dari').value);
+            const dan = encodeURIComponent(document.getElementById('dan').value);
             
              // Ambil URL untuk gambar
     
 
             // Buat link dengan parameter
             const link = `https://UndanganKita.github.io/Wedding/ID0/index.html?` +
-                `awal-fun-p-id1=${awalfunpid1}&awal-fun-h1-id1=${awalfunh1id1}&awal-fun-h1-id11=${awalfunh1id11}`;
+                `kepada=${kepada}&dari=${dari}&dan=${dan}`;
                
             // Tampilkan notifikasi
             Swal.fire({
