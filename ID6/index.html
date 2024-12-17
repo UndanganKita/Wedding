@@ -4352,15 +4352,15 @@
 
                 </div>
                 <br>
-                <h1 id="awal-fun-h1-id1" style=" font-size: 28px; color: #303333 !important; margin-top: -20px"
+                <h1 id="dari" style=" font-size: 28px; color: #303333 !important; margin-top: -20px"
                     class="fun-h1-3">
                     Edy &amp; Cindy</h1>
                 <br>
-                <p id="awal-fun-p-id1" style="" class="fun-p-122">
-                    Kepada Bapak Edy</p>
+                <p style="" class="fun-p-122">
+                    Kepada :</p>
                 <br>
 
-                <p style=" margin-top: -20px;" id="kpd" class="fun-p-123"></p>
+                <p style=" margin-top: -20px;" id="kepada" class="fun-p-123">Bapak Edy</p>
                 <br>
                 <button id="btn_open" class="button-black" style="margin: 0 auto;width: 70%;" type="button"
                     data-keyboard="false">
@@ -7865,14 +7865,14 @@
     const params = getQueryParams();
 
     // Perbarui elemen di halaman berdasarkan query parameter
-    if (params["awal-fun-p-id1"]) {
-        const tujuanElement = document.getElementById("awal-fun-p-id1");
-        if (tujuanElement) tujuanElement.textContent = params["awal-fun-p-id1"];
+    if (params["kepada"]) {
+        const tujuanElement = document.getElementById("kepada");
+        if (tujuanElement) tujuanElement.textContent = params["kepada"];
     }
 
-    if (params["awal-fun-h1-id1"]) {
-        const namaLakiElement = document.getElementById("awal-fun-h1-id1");
-        if (namaLakiElement) namaLakiElement.textContent = params["awal-fun-h1-id1"];
+    if (params["dari"]) {
+        const namaLakiElement = document.getElementById("dari");
+        if (namaLakiElement) namaLakiElement.textContent = params["dari"];
     }
 
 </script>
