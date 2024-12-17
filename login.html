@@ -71,7 +71,7 @@
       color: red;
     }
      /* Optimasi untuk perangkat kecil */
-    @media (max-width: 480px) {
+     @media (max-width: 480px) {
       body {
         padding: 10px;
       }
@@ -165,7 +165,7 @@
           messageDiv.textContent = data.message;
           if (data.status === 'success' && !isSignup) {
             alert(`Selamat Datang, ${data.name}!`);
-            window.location.href = "index1.html";
+            window.location.href = "#.html";
           }
         })
         .catch(error => {
