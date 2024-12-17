@@ -4386,14 +4386,14 @@
 
                     <h2 id="awal-fun-h2-id2-wed"
                         style="font-size: 35px; color: #000 !important; margin-top: 7px; position: relative; font-weight: 400; text-stroke: 0.7px; -webkit-text-stroke: 0.7px;"
-                        id="text1" class="fun-h2-0">Edy <span style="font-family: &#39;Diamond Signature&#39;, sans-serif; font-size: 32px;"
-                        id="text" class="fun-span-120">&amp;</span> Cindy</h2>
+                        id="dari" class="fun-h2-0">Edy <span style="font-family: &#39;Diamond Signature&#39;, sans-serif; font-size: 32px;"
+                        id="dan" class="fun-span-120">&amp;</span> Cindy</h2>
                 </div>
                 <p id="awal-fun-p-id1" style="ont-size: 14px; margin-top: 5px; color: #000 !important;"
                     class="fun-p-122">
-                    Kepada Bapak Edy</p>
-                <h1 style="font-size: 35px !important; color:#564f37 !important; font-weight: bold;" id="kpd"
-                    class="fun-h1-4"></h1>
+                    Kepada :</p>
+                <h1 style="font-size: 35px !important; color:#564f37 !important; font-weight: bold;" id="kepada"
+                    class="fun-h1-4">Bapak Edy</h1>
                 <p id="awal-fun-p-id3"
                     style="color: #000 !important; font-weight: 600; font-size: 9.2px; width: 75%; margin: 0 auto; padding-top: 2.5px;"
                     class="fun-p-123">
@@ -7844,19 +7844,19 @@
             const params = getQueryParams();
 
             // Perbarui elemen di halaman berdasarkan query parameter
-            if (params["awal-fun-p-id1"]) {
-                const tujuanElement = document.getElementById("awal-fun-p-id1");
-                if (tujuanElement) tujuanElement.textContent = params["awal-fun-p-id1"];
+            if (params["kepada"]) {
+                const tujuanElement = document.getElementById("kepada");
+                if (tujuanElement) tujuanElement.textContent = params["kepada"];
             }
 
-            if (params["text1"]) {
-                const namaLakiElement = document.getElementById("text1");
-                if (namaLakiElement) namaLakiElement.textContent = params["text1"];
+            if (params["dari"]) {
+                const namaLakiElement = document.getElementById("dari");
+                if (namaLakiElement) namaLakiElement.textContent = params["dari"];
             }
 
-            if (params["text"]) {
-                const namaPerempuanElement = document.getElementById("text");
-                if (namaPerempuanElement) namaPerempuanElement.textContent = params["text"];
+            if (params["dan"]) {
+                const namaPerempuanElement = document.getElementById("dan");
+                if (namaPerempuanElement) namaPerempuanElement.textContent = params["dan"];
             }
 
         </script>
