@@ -5292,13 +5292,12 @@
                                     </div>
                                     <div class="wrapper-element fun-div-503" style="margin-bottom: 0.5rem">
                                         <div class="panggilan_mempelai_cli fun-div-504">
-                                            <h1 id="aca-fun-h1-id1" class="mempelai-eg fun-h1-2 aos-init aos-animate"
+                                            <h1 id="dari" class="mempelai-eg fun-h1-2 aos-init aos-animate"
                                                 data-aos="fade-down"><span
                                                     class="nama_panggilan_pria_gr fun-span-120">EDY</span> &amp;
                                                 <span class="nama_panggilan_wanita_gr fun-span-121">CINDY</span>
                                             </h1>
                                         </div>
-
 
                                     </div>
                                 </div>
@@ -5327,12 +5326,12 @@
                                 <div class="col-md-12 text-center fun-div-511">
                                     <div class="kepada-wrapper fun-div-512">
                                         <div class="wrapper-element fun-div-513">
-                                            <h2 id="text" class="fun-h2-1">Kepada Bapak EDY</h2>
+                                            <h2 class="fun-h2-1">Kepada :</h2>
                                         </div>
                                     </div>
                                     <div class="kepada-wrapper fun-div-514">
                                         <div class="wrapper-element fun-div-515">
-                                            <h2 class="guest fun-h2-2" id="kpd"></h2>
+                                            <h2 class="guest fun-h2-2" id="kepada">Bapak EDY</h2>
                                         </div>
                                     </div>
                                     <div class="sub-wrapper fun-div-516">
@@ -9670,14 +9669,14 @@
             const params = getQueryParams();
         
             // Perbarui elemen di halaman berdasarkan query parameter
-            if (params["text"]) {
-                const tujuanElement = document.getElementById("text");
-                if (tujuanElement) tujuanElement.textContent = params["text"];
+            if (params["kepada"]) {
+                const tujuanElement = document.getElementById("kepada");
+                if (tujuanElement) tujuanElement.textContent = params["kepada"];
             }
         
-            if (params["aca-fun-h1-id1"]) {
-                const namaLakiElement = document.getElementById("aca-fun-h1-id1");
-                if (namaLakiElement) namaLakiElement.textContent = params["aca-fun-h1-id1"];
+            if (params["dari"]) {
+                const namaLakiElement = document.getElementById("dari");
+                if (namaLakiElement) namaLakiElement.textContent = params["dari"];
             }     
        
             </script>
