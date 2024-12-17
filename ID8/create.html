@@ -131,10 +131,10 @@
             <textarea id="kepada" placeholder="exp: Ibu/Bpk Edy"></textarea>
 
             <label for="dari">Nama Pengantin Laki</label>
-            <input type="    " id="dari" placeholder="exp: EDY">
+            <input type="text" id="dari" placeholder="exp: EDY">
 
             <label for="dan">Nama Pengantin Perempuan</label>
-            <input type="    " id="dan" placeholder="exp: CINDY">
+            <input type="text" id="dan" placeholder="exp: CINDY">
             
             <button type="submit">Buat link</button>
         </form>
@@ -149,16 +149,16 @@
             e.preventDefault();
 
             // Ambil nilai input
-            const kepada = encodeURIComponent(document.getElementById('awal-fun-p-id1').value);
+            const kepada = encodeURIComponent(document.getElementById('kepada').value);
             const dari = encodeURIComponent(document.getElementById('dari').value);
-            const      = encodeURIComponent(document.getElementById('    ').value);
+            const dan = encodeURIComponent(document.getElementById('dan').value);
             
              // Ambil URL untuk gambar
     
 
             // Buat link dengan parameter
             const link = `https://UndanganKita.github.io/Wedding/ID8/index.html?` +
-                `awal-fun-p-id1=${awalfunpid1}&dari=${dari}&    =${    }`;
+                `kepada=${kepada}&dari=${dari}&dan=${dan}`;
                
             // Tampilkan notifikasi
             Swal.fire({
