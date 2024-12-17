@@ -5629,9 +5629,9 @@
                                         Wedding
                                     </h2>
                                     <div class="panggilan_mempelai_cli fun-div-512">
-                                        <h1 id="aca-fun-h1-id1" class="mempelai-eg fun-h1-2 aos-init aos-animate"
-                                        ><span id="text1" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp;
-                                        <span id="text" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span> 
+                                        <h1 class="mempelai-eg fun-h1-2 aos-init aos-animate"
+                                        ><span id="dari" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp;
+                                        <span id="dan" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span> 
                                         </h1>
                                    
                                 </div>
@@ -5639,10 +5639,9 @@
                                     <p id="desc" class="kepada text-elegan-nature fun-p-122">Tanpa Mengurangi Rasa
                                         Hormat, Kami Mengundang Bapak/Ibu/Saudara/i untuk Hadir di Acara Kami.
                                     </p>
-                                    <p id="kepada" class="kepada text-elegan-nature fun-p-123"
-                                        style="font-size: 20px; margin-bottom: 5px;">Kepada Bapak Edy
-                                    </p>
-                                    <p id="kpd" class="text-elegan-nature fun-p-124"></p>
+                                    <p class="kepada text-elegan-nature fun-p-123"
+                                        style="font-size: 15px; margin-bottom: 5px;">Kepada :</p>
+                                    <p id="kepada" class="text-elegan-nature fun-p-124">Bapak Edy</p>
 
                                     <div class="btn-wrapper fun-div-513">
                                         <a class="btn btn-elegan-nature fun-a-31" role="button" id="btn-envelope">
@@ -10434,14 +10433,14 @@
                 if (tujuanElement) tujuanElement.textContent = params["kepada"];
             }
 
-            if (params["text1"]) {
-                const namaLakiElement = document.getElementById("text1");
-                if (namaLakiElement) namaLakiElement.textContent = params["text1"];
+            if (params["dari"]) {
+                const namaLakiElement = document.getElementById("dari");
+                if (namaLakiElement) namaLakiElement.textContent = params["dari"];
             }
 
-            if (params["text"]) {
-                const namaPerempuanElement = document.getElementById("text");
-                if (namaPerempuanElement) namaPerempuanElement.textContent = params["text"];
+            if (params["dan"]) {
+                const namaPerempuanElement = document.getElementById("dan");
+                if (namaPerempuanElement) namaPerempuanElement.textContent = params["dan"];
             }
 
 
