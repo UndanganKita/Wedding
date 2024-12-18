@@ -4430,16 +4430,16 @@
                         overflow: hidden; background:url(&#39;img/1659166691.jpeg&#39;) !important;
                         background-position: center !important; background-repeat: no-repeat !important; background-size: cover !important;"></div>
                 <br>
-                <h4 id="awal-fun-h4-id1"
+                <h4 id="dari"
                     style="font-size: 45px !important; color: #e3b04c !important; margin-top: -10px" class="fun-h4-0">
                     Edy &amp; Cindy</h4>
 
                 <br>
                 <p id="awal-fun-p-id1" style="color: #e3b04c !important; font-size: 15px;" class="fun-p-122">
-                    Kepada Bapak Edy</p>
+                    Kepada :</p>
                 <br>
-                <p style="color: #e3b04c !important; font-size: 20px; margin-top: -35px;" id="kpd" class="fun-p-123">
-                </p>
+                <p style="color: #e3b04c !important; font-size: 20px; margin-top: -35px;" id="kepada" class="fun-p-123">
+                    Bapak Edy</p>
                 <br>
                 <button id="btn_open" class="button-black"
                     style="margin: 0 auto; width: 50%; border-radius: 45px 0px 45px 0px !important; color: #e3b04c !important;"
@@ -7903,14 +7903,14 @@
     const params = getQueryParams();
 
     // Perbarui elemen di halaman berdasarkan query parameter
-    if (params["awal-fun-p-id1"]) {
-        const tujuanElement = document.getElementById("awal-fun-p-id1");
-        if (tujuanElement) tujuanElement.textContent = params["awal-fun-p-id1"];
+    if (params["kepada"]) {
+        const tujuanElement = document.getElementById("kepada");
+        if (tujuanElement) tujuanElement.textContent = params["kepada"];
     }
 
-    if (params["awal-fun-h4-id1"]) {
-        const namaLakiElement = document.getElementById("awal-fun-h4-id1");
-        if (namaLakiElement) namaLakiElement.textContent = params["awal-fun-h4-id1"];
+    if (params["dari"]) {
+        const namaLakiElement = document.getElementById("dari");
+        if (namaLakiElement) namaLakiElement.textContent = params["dari"];
     }     
 
     </script>
