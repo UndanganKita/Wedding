@@ -127,11 +127,11 @@
 
     <div class="form-container">
         <form id="editForm">
-            <label for="awal-fun-p-id1">nama tujuan</label>
-            <textarea id="awal-fun-p-id1" placeholder="exmp: Kepada Ibu/Bpk Edy"></textarea>
+            <label for="kepada">nama tujuan</label>
+            <textarea id="kepada" placeholder="exmp: Ibu/Bpk Edy"></textarea>
 
-            <label for="awal-fun-h4-id1">Nama Pengantin Laki & Perempuan</label>
-            <input type="text" id="awal-fun-h4-id1" placeholder="exmp: Edy & Cindy">
+            <label for="dari">Nama Pengantin Laki & Perempuan</label>
+            <input type="text" id="dari" placeholder="exmp: Edy & Cindy">
 
             <button type="submit">Buat link</button>
         </form>
@@ -146,12 +146,12 @@
             e.preventDefault();
 
             // Ambil nilai input
-            const awalfunpid1 = encodeURIComponent(document.getElementById('awal-fun-p-id1').value);
-            const awalfunh4id1 = encodeURIComponent(document.getElementById('awal-fun-h4-id1').value);
+            const kepada = encodeURIComponent(document.getElementById('kepada').value);
+            const dari = encodeURIComponent(document.getElementById('dari').value);
 
             // Buat link dengan parameter
             const link = `https://UndanganKita.github.io/Wedding/ID30/index.html?` +
-                `awal-fun-p-id1=${awalfunpid1}&awal-fun-h4-id1=${awalfunh4id1}`;
+                `kepada=${kepada}&dari=${dari}`;
             // Tampilkan notifikasi
             Swal.fire({
                 icon: 'success',
