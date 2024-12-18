@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Rekening</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .rek_body {
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .rek_each_soft_white {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .rek_gambar img {
+            width: 100px;
+            height: 50px;
+        }
+        .rek_kiri {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .rek_kiri p {
+            margin: 2px 0;
+        }
+        .rek_kanan button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .rek_kanan button:hover {
+            background-color: #0056b3;
+        }
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsif untuk perangkat kecil */
+        @media (max-width: 480px) {
+            .rek_each_soft_white {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .rek_gambar img {
+                width: 40px;
+                height: 40px;
+            }
+            .rek_kiri {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+            .rek_kanan button {
+                margin-top: 10px;
+                width: 100%;
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rek_body">
+        <!-- Rekening 1 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/bca.svg" alt="Nomor rekening">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">12345678</p>
+                <p class="rek_an">Cindy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="12345678"><i class="icon-copy"></i> Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 2 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/sinarmas.webp" alt="Nomor rekening">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">0982309823</p>
+                <p class="rek_an">Edy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="0982309823"><i class="icon-copy"></i> Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 3 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/mestika.png" alt="Nomor rekening">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">99787238</p>
+                <p class="rek_an">Papanya Cindy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="99787238"><i class="icon-copy"></i> Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 4 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/bri.svg" alt="Nomor rekening">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">123456789123</p>
+                <p class="rek_an">Van</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="123456789123"><i class="icon-copy"></i> Copy</button>
+            </div>
+        </div>
+    </div>
+    <div class="notification" id="notification">Nomor rekening berhasil disalin!</div>
+
+    <script>
+        document.querySelectorAll('.rek_copy').forEach(button => {
+            button.addEventListener('click', function () {
+                const rekening = this.getAttribute('data-rek');
+                navigator.clipboard.writeText(rekening).then(() => {
+                    const notification = document.getElementById('notification');
+                    notification.textContent = `Nomor rekening ${rekening} berhasil disalin!`;
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                }).catch(err => {
+                    alert('Gagal menyalin nomor rekening.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
