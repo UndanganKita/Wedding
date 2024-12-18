@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Silverweed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Silverweed'), url('https://fonts.cdnfonts.com/s/42705/Silverweed-axP0K.woff') format('woff');
+}
+
+
