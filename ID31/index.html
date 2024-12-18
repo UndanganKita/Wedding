@@ -4392,16 +4392,16 @@
                 <h1 id="aw-h1-id1" style="color: #ffffff !important; font-size: 30px;" class="fun-h1-2">Wedding
                     Invitation</h1>
                 <br>
-                <h1 id="aw-fun-h1-id2"
+                <h1 id="dari"
                     style=" font-size: 58px; color: #69d3f0 !important; line-height: 35px; margin-top: 0px;"
                     class="fun-h1-3">
                     Edy &amp; <br> Cindy</h1>
                 <br>
                 <h3 id="awal-fun-h3-id1" style="color: #fff !important" class="fun-h3-0">
-                    Kepada Bapak Edy</h3>
+                    Kepada :</h3>
                 <br>
 
-                <h3 style=" margin-top: -20px; color: #fff !important" id="kpd" class="fun-h3-1"></h3>
+                <h3 style=" margin-top: -20px; color: #fff !important" id="kepada" class="fun-h3-1">Bapak Edy</h3>
                 <br>
 
                 <button id="btn_open" class="button-black" style="margin: 0 auto;width: 70%; border-radius: 8px;"
@@ -7832,14 +7832,14 @@
                 const params = getQueryParams();
             
                 // Perbarui elemen di halaman berdasarkan query parameter
-                if (params["awal-fun-h3-id1"]) {
-                    const tujuanElement = document.getElementById("awal-fun-h3-id1");
-                    if (tujuanElement) tujuanElement.textContent = params["awal-fun-h3-id1"];
+                if (params["kepada"]) {
+                    const tujuanElement = document.getElementById("kepada");
+                    if (tujuanElement) tujuanElement.textContent = params["kepada"];
                 }
             
-                if (params["aw-fun-h1-id2"]) {
-                    const namaLakiElement = document.getElementById("aw-fun-h1-id2");
-                    if (namaLakiElement) namaLakiElement.textContent = params["aw-fun-h1-id2"];
+                if (params["dari"]) {
+                    const namaLakiElement = document.getElementById("dari");
+                    if (namaLakiElement) namaLakiElement.textContent = params["dari"];
                 }     
             
                 </script>
