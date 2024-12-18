@@ -4519,8 +4519,8 @@
                         class="fun-img-100">
                     <div class="panggilan_mempelai_cli fun-div-499">
                         <h1 id="aca-fun-h1-id1" class="mempelai-eg fun-h1-2 aos-init aos-animate" data-aos="fade-down">
-                            <span id="text1" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp; <span
-                                id="text" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span>
+                            <span id="dari" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp; <span
+                                id="dan" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span>
                         </h1>
                     </div>
 
@@ -4531,11 +4531,11 @@
                     </p>
                     <p id="awal-fun-p-id1" style="margin-top: 10px; font-size: 20px; color: #0b285c !important;"
                         class="fun-p-123">
-                        Kepada Bapak Edy
+                        Kepada :
                     </p>
                     <br>
                     <h1 style="font-weight: bold; margin-top: -20px; font-size: 35px; color: #0b285c !important;"
-                        id="kpd" class="fun-h1-3"></h1>
+                        id="kepada" class="fun-h1-3">Bapak Edy</h1>
                     <button id="btn_open" class="button-black"
                         style="margin: 0 auto; width: 65%; border-radius: 8px !important; margin-top: 15px"
                         type="button" data-keyboard="false; ">
@@ -8131,19 +8131,19 @@
     const params = getQueryParams();
 
     // Perbarui elemen di halaman berdasarkan query parameter
-    if (params["awal-p-id1-dino"]) {
-        const tujuanElement = document.getElementById("awal-p-id1-dino");
-        if (tujuanElement) tujuanElement.textContent = params["awal-p-id1-dino"];
+    if (params["kepada"]) {
+        const tujuanElement = document.getElementById("kepada");
+        if (tujuanElement) tujuanElement.textContent = params["kepada"];
     }
 
-    if (params["text1"]) {
-        const namaLakiElement = document.getElementById("text1");
-        if (namaLakiElement) namaLakiElement.textContent = params["text1"];
+    if (params["dari"]) {
+        const namaLakiElement = document.getElementById("dari");
+        if (namaLakiElement) namaLakiElement.textContent = params["dari"];
     }
 
-    if (params["text"]) {
-        const namaPerempuanElement = document.getElementById("text");
-        if (namaPerempuanElement) namaPerempuanElement.textContent = params["text"];
+    if (params["dan"]) {
+        const namaPerempuanElement = document.getElementById("dan");
+        if (namaPerempuanElement) namaPerempuanElement.textContent = params["dan"];
     }
 
 </script>
