@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Brookelyn';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Brookelyn'), url('https://fonts.cdnfonts.com/s/56479/Brookelyn-MV70J.woff') format('woff');
+}
+
+
