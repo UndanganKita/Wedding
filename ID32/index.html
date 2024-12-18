@@ -5204,17 +5204,17 @@
                     </div>
                     <div class="panggilan_mempelai_cli fun-div-501">
                         <h1 id="aca-fun-h1-id1" class="mempelai-eg fun-h1-2 aos-init aos-animate" data-aos="fade-down">
-                            <span id="text1" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp; <span
-                                id="text" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span></h1>
+                            <span id="dari" class="nama_panggilan_pria_gr fun-span-120">Edy</span> &amp; <span
+                                id="dan" class="nama_panggilan_wanita_gr fun-span-121">Cindy</span></h1>
                     </div>
 
                     <br>
                     <br>
                     <p id="awal-fun-p-id1" style="font-size: 18px;" class="fun-p-122">
-                        Kepada Bapak Edy
+                        Kepada :
                     </p>
-                    <h3 style="margin-top: 5px; font-size: 25px; color: #28282B !important; font-weight: bold;" id="kpd"
-                        class="fun-h3-0"></h3>
+                    <h3 style="margin-top: 5px; font-size: 25px; color: #28282B !important; font-weight: bold;" id="kepada"
+                        class="fun-h3-0">Bapak Edy</h3>
 
                     <button id="btn_open" class="button-black"
                         style="margin: 0 auto; margin-top: 10px; width: 55%; border-radius: 7px !important;"
@@ -8735,19 +8735,19 @@
     const params = getQueryParams();
 
     // Perbarui elemen di halaman berdasarkan query parameter
-    if (params["awal-fun-p-id1"]) {
-        const tujuanElement = document.getElementById("awal-fun-p-id1");
-        if (tujuanElement) tujuanElement.textContent = params["awal-fun-p-id1"];
+    if (params["kepada"]) {
+        const tujuanElement = document.getElementById("kepada");
+        if (tujuanElement) tujuanElement.textContent = params["kepada"];
     }
 
-    if (params["text1"]) {
-        const namaLakiElement = document.getElementById("text1");
-        if (namaLakiElement) namaLakiElement.textContent = params["text1"];
+    if (params["dari"]) {
+        const namaLakiElement = document.getElementById("dari");
+        if (namaLakiElement) namaLakiElement.textContent = params["dari"];
     }
 
-    if (params["text"]) {
-        const namaPerempuanElement = document.getElementById("text");
-        if (namaPerempuanElement) namaPerempuanElement.textContent = params["text"];
+    if (params["dan"]) {
+        const namaPerempuanElement = document.getElementById("dan");
+        if (namaPerempuanElement) namaPerempuanElement.textContent = params["dan"];
     }
 
 </script>
