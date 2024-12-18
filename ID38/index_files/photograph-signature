@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Photograph Signature';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Photograph Signature'), url('https://fonts.cdnfonts.com/s/30214/Photograph Signature.woff') format('woff');
+}
+
+
