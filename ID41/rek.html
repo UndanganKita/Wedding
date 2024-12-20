@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Rekening</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #e3f2fd, #f1f8e9);
+            color: #333;
+            line-height: 1.6;
+        }
+        .rek_body {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .rek_each_soft_white {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .rek_each_soft_white:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .rek_gambar img {
+            width: 60px;
+            height: 40px;
+            border-radius: 5px;
+        }
+        .rek_kiri {
+            flex: 1;
+            margin-left: 10px;
+        }
+        .rek_kiri p {
+            margin: 2px 0;
+            font-weight: 500;
+        }
+        .rek_kanan button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .rek_kanan button:hover {
+            background-color: #388e3c;
+            transform: scale(1.05);
+        }
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            font-weight: bold;
+        }
+        
+        /* Responsif untuk semua perangkat */
+        @media (max-width: 600px) {
+            .rek_each_soft_white {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .rek_gambar img {
+                width: 50px;
+                height: 30px;
+            }
+            .rek_kiri {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+            .rek_kanan button {
+                margin-top: 10px;
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rek_body">
+        <!-- Rekening 1 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/bca.svg" alt="BCA">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">12345678</p>
+                <p class="rek_an">Cindy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="12345678">Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 2 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/sinarmas.webp" alt="Sinarmas">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">0982309823</p>
+                <p class="rek_an">Edy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="0982309823">Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 3 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/mestika.png" alt="Mestika">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">99787238</p>
+                <p class="rek_an">Papanya Cindy</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="99787238">Copy</button>
+            </div>
+        </div>
+        <!-- Rekening 4 -->
+        <div class="rek_each_soft_white">
+            <div class="rek_gambar">
+                <img src="./index_files/bri.svg" alt="BRI">
+            </div>
+            <div class="rek_kiri">
+                <p class="rek_norek">123456789123</p>
+                <p class="rek_an">Van</p>
+            </div>
+            <div class="rek_kanan">
+                <button class="rek_copy" data-rek="123456789123">Copy</button>
+            </div>
+        </div>
+    </div>
+    <div class="notification" id="notification">Nomor rekening berhasil disalin!</div>
+
+    <script>
+        document.querySelectorAll('.rek_copy').forEach(button => {
+            button.addEventListener('click', function () {
+                const rekening = this.getAttribute('data-rek');
+                navigator.clipboard.writeText(rekening).then(() => {
+                    const notification = document.getElementById('notification');
+                    notification.textContent = `Nomor rekening ${rekening} berhasil disalin!`;
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                        notification.style.display = 'none';
+                    }, 3000);
+                }).catch(err => {
+                    alert('Gagal menyalin nomor rekening.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
