@@ -246,8 +246,31 @@
             transform: scale(1.02);
             transition: transform 0.3s ease;
         }
+        
+        /* Media Query untuk Android */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
 
+            .emoji {
+                font-size: 2em;
+            }
 
+            input,
+            textarea {
+                font-size: 0.9em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
         
     </style>
 
