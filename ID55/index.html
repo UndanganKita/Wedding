@@ -3958,11 +3958,34 @@
 			}
 		});
 	</script>
+       
+	<script>
+		// Fungsi untuk mendapatkan query parameter dari URL
+		function getQueryParams() {
+			const params = {};
+			const queryString = window.location.search.slice(1); // Hilangkan tanda ?
+			queryString.split("&").forEach(pair => {
+				const [key, value] = pair.split("=");
+				params[key] = decodeURIComponent(value || "");
+			});
+			return params;
+		}
 
+		// Ambil parameter dari URL
+		const params = getQueryParams();
 
+		// Perbarui elemen di halaman berdasarkan query parameter
+		if (params["kepada"]) {
+			const tujuanElement = document.getElementById("kepada");
+			if (tujuanElement) tujuanElement.textContent = params["kepada"];
+		}
 
+		if (params["dari"]) {
+			const namaLakiElement = document.getElementById("dari");
+			if (namaLakiElement) namaLakiElement.textContent = params["dari"];
+		}
 
-
+	</script>
 	<script src="./index_files/dialog.min.js.download"></script>
 	<script src="./index_files/share-link.min.js.download"></script>
 	<script src="./index_files/swiper.min.js.download"></script><svg style="display: none;"
