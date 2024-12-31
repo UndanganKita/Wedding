@@ -23,256 +23,237 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <style>
-       
-       header nav a {
-            color: rgb(60, 63, 240);
-            text-decoration: none;
-            margin: 0 10px;
-            font-weight: bold;
-        }
+   <style>
+    /* Gaya Header dan Navigasi */
+    header nav a {
+        color: rgb(60, 63, 240);
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+    }
 
-        .splide-testimoni .splide__list {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
+    /* Gaya Testimoni dan Klien Slider */
+    .splide-testimoni .splide__list {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
 
-        .splide-testimoni .splide__slide {
-            flex: none;
-        }
+    .splide-testimoni .splide__slide {
+        flex: none;
+    }
 
-        .splide-client .splide__slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* Tetapkan ukuran slide */
-            height: 150px;
-            /* Sesuaikan sesuai kebutuhan */
-        }
+    .splide-client .splide__slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+    }
 
-        .splide-client .slider-image {
-            width: 100%;
-            /* Tetapkan lebar penuh agar sesuai dengan ukuran container */
-            height: 100%;
-            /* Tetapkan tinggi sesuai slide */
-            object-fit: contain;
-            /* Pastikan gambar tidak terpotong dan tetap proporsional */
-            max-width: 150px;
-            /* Batas maksimum lebar gambar */
-            max-height: 100px;
-            /* Batas maksimum tinggi gambar */
-        }
-    </style>
-    <style>
-        /* Menerapkan animasi ke div */
-        .bounce-right {
-            transition: transform 0.3s ease-in;
-        }
+    .splide-client .slider-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-width: 150px;
+        max-height: 100px;
+    }
 
-        .bounce-right.hide {
-            transform: translateY(100px);
-            /* Tersembunyi di bawah */
-        }
+    /* Animasi Bounce Right */
+    .bounce-right {
+        transition: transform 0.3s ease-in;
+    }
 
-        .bounce-right.show {
-            transform: translateY(0);
-            /* Muncul kembali */
-        }
-    </style>
+    .bounce-right.hide {
+        transform: translateY(100px);
+    }
 
-    <style>
-        /* css koment&likes*/
-        body {
-            font-family: 'Poppins', sans-serif;
+    .bounce-right.show {
+        transform: translateY(0);
+    }
 
-            background: linear-gradient(to bottom, #1e3c72, #2a5298);
-            color: #443939;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            justify-content: center;
-        }
+    /* Gaya Utama untuk Komentar & Likes */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        color: #443939;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: center;
+    }
 
-        .container1 {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            padding: 30px;
-            width: 90%;
-            max-width: 500px;
-            text-align: center;
-            align-items: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    .container1 {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        padding: 30px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 
-        }
+    h1 {
+        font-size: 2em;
+        color: #a8f574;
+        margin-bottom: 20px;
+    }
 
+    h2 {
+        font-size: 2em;
+        color: #5e9408b9;
+        margin-bottom: 20px;
+    }
 
+    .emoji-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 20px 0;
+    }
+
+    .emoji {
+        font-size: 2em;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                     -4px -4px 10px rgba(134, 123, 123, 0.61);
+    }
+
+    .emoji:hover {
+        transform: scale(1.3);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .like-count {
+        font-size: 1em;
+        margin-top: 5px;
+        color: #ffd700;
+    }
+
+    .comment-form {
+        margin-top: 20px;
+    }
+
+    label {
+        font-size: 1em;
+        text-align: left;
+        display: block;
+        margin-bottom: 8px;
+        margin-top: 20px;
+    }
+
+    input, textarea {
+        width: 90%;
+        padding: 12px;
+        font-size: 1em;
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 5px #ffd700;
+    }
+
+    button {
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
+        color: white;
+        font-size: 1em;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                     -4px -4px 10px rgba(134, 123, 123, 0.61);
+    }
+
+    button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(255, 70, 92, 0.5);
+    }
+
+    .comment-list {
+        margin-top: 20px;
+        text-align: left;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                     -4px -4px 10px rgba(134, 123, 123, 0.61);
+    }
+
+    .comment-item {
+        background: linear-gradient(to right, #6a11cb, #2575fc);
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .comment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .comment-icon {
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+
+    .comment-time {
+        font-size: 0.9em;
+        color: #ffd700;
+        margin-top: 10px;
+        text-align: right;
+        font-style: italic;
+        font-weight: bold;
+        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                     -4px -4px 10px rgba(134, 123, 123, 0.61);
+    }
+
+    .comment-item:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
+    }
+
+    /* Media Query untuk Android */
+    @media (max-width: 600px) {
         h1 {
-            font-size: 2em;
-            color: #a8f574;
-            margin-bottom: 20px;
-        }
-
-        h2 {
-            font-size: 2em;
-            color: #5e9408b9;
-            margin-bottom: 20px;
-        }
-
-        .emoji-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
+            font-size: 1.5em;
         }
 
         .emoji {
-            font-size: 2.0em;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            font-style: italic;
-            font-weight: bold;
-            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                -4px -4px 10px rgba(134, 123, 123, 0.61)
+            font-size: 1.8em;
         }
 
-        .emoji:hover {
-            transform: scale(1.3);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .like-count {
-            font-size: 1em;
-            margin-top: 5px;
-            color: #ffd700;
-        }
-
-        .comment-form {
-            margin-top: 20px;
-        }
-
-        label {
-            font-size: 1em;
-            text-align: left;
-            display: block;
-            margin-bottom: 8px;
-            margin-top: 20px;
-        }
-
-        input,
-        textarea {
-            width: 90%;
-            padding: 12px;
-            font-size: 1em;
-            border: none;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            box-shadow: 0 0 5px #ffd700;
+        input, textarea {
+            font-size: 0.9em;
         }
 
         button {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: white;
-            font-size: 1em;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            font-style: italic;
-            font-weight: bold;
-            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                -4px -4px 10px rgba(134, 123, 123, 0.61)
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(255, 70, 92, 0.5);
-        }
-
-        .comment-list {
-            margin-top: 20px;
-            text-align: left;
-            font-style: italic;
-            font-weight: bold;
-            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                -4px -4px 10px rgba(134, 123, 123, 0.61)
-        }
-
-        .comment-item {
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .comment-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-        }
-
-        .comment-icon {
-            font-size: 1.5em;
-            margin-right: 10px;
-        }
-
-        .comment-time {
+            padding: 10px 20px;
             font-size: 0.9em;
-            color: #ffd700;
-            margin-top: 10px;
-            text-align: right;
-            font-style: italic;
-            font-weight: bold;
-            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                -4px -4px 10px rgba(134, 123, 123, 0.61)
         }
 
-        .comment-item:hover {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
+        .container1 {
+            padding: 20px;
         }
-        
-        /* Media Query untuk Android */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
+    }
+</style>
 
-            .emoji {
-                font-size: 2em;
-            }
-
-            input,
-            textarea {
-                font-size: 0.9em;
-            }
-
-            button {
-                padding: 10px 20px;
-                font-size: 0.9em;
-            }
-
-            .container {
-                padding: 20px;
-            }
-        }
-        
-    </style>
 
 
     <script async="" src="./sampulundangan_files/clarity.js.download"></script>
