@@ -22,83 +22,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<style>
-        /* Base Styles */
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #1e3c72, #2a5298);
-            color: #fff;
-        }
-        header {
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 15px;
-        }
-        header h1 {
-            font-size: 1.5rem;
-            text-align: center;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
             color: #333;
         }
-        .container {
-            padding: 15px;
-            max-width: 1200px;
-            margin: auto;
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            color: #ff4b2b;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
         .card {
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            margin-bottom: 20px;
+            width: calc(100% - 40px);
+            max-width: 300px;
+            transition: transform 0.3s ease;
         }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
         .card img {
             width: 100%;
-            height: auto;
+            height: 200px;
+            object-fit: cover;
         }
+
         .card-content {
             padding: 15px;
+            text-align: center;
         }
+
         .card-content h2 {
             font-size: 1.2rem;
             color: #333;
+            margin: 10px 0;
         }
+
         .card-content p {
             font-size: 1rem;
             color: #666;
         }
 
-        /* Media Queries for Responsive Design */
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+        }
+
+        /* Responsive Styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
-            .card-content h2 {
-                font-size: 1rem;
-            }
-            .card-content p {
-                font-size: 0.9rem;
-            }
-        }
-        @media (max-width: 480px) {
-            header {
-                padding: 10px;
-            }
-            header h1 {
-                font-size: 1rem;
-            }
+
             .container {
                 padding: 10px;
             }
+
             .card {
-                margin-bottom: 15px;
+                width: calc(100% - 20px);
             }
+
             .card-content h2 {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
+
             .card-content p {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
         }
     </style>
