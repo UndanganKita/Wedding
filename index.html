@@ -22,6 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+
     <style>
        
        header nav a {
@@ -79,190 +80,199 @@
             /* Muncul kembali */
         }
     </style>
-   <style>    
-    /* Gaya Utama untuk Komentar & Likes */
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(to bottom, #1e3c72, #2a5298);
-        color: #443939;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
-        justify-content: center;
-    }
 
-    .container1 {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        padding: 30px;
-        width: 90%;
-        max-width: 500px;
-        text-align: center;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    }
+    <style>
+        /* css koment&likes*/
+        body {
+            font-family: 'Poppins', sans-serif;
 
-    h1 {
-        font-size: 2em;
-        color: #a8f574;
-        margin-bottom: 20px;
-    }
-
-    h2 {
-        font-size: 2em;
-        color: #5e9408b9;
-        margin-bottom: 20px;
-    }
-
-    .emoji-container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin: 20px 0;
-    }
-
-    .emoji {
-        font-size: 2em;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        font-style: italic;
-        font-weight: bold;
-        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                     -4px -4px 10px rgba(134, 123, 123, 0.61);
-    }
-
-    .emoji:hover {
-        transform: scale(1.3);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .like-count {
-        font-size: 1em;
-        margin-top: 5px;
-        color: #ffd700;
-    }
-
-    .comment-form {
-        margin-top: 20px;
-    }
-
-    label {
-        font-size: 1em;
-        text-align: left;
-        display: block;
-        margin-bottom: 8px;
-        margin-top: 20px;
-    }
-
-    input, textarea {
-        width: 90%;
-        padding: 12px;
-        font-size: 1em;
-        border: none;
-        border-radius: 8px;
-        margin-bottom: 15px;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    input:focus, textarea:focus {
-        outline: none;
-        box-shadow: 0 0 5px #ffd700;
-    }
-
-    button {
-        background: linear-gradient(to right, #ff416c, #ff4b2b);
-        color: white;
-        font-size: 1em;
-        padding: 12px 25px;
-        border: none;
-        border-radius: 25px;
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        font-style: italic;
-        font-weight: bold;
-        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                     -4px -4px 10px rgba(134, 123, 123, 0.61);
-    }
-
-    button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15px rgba(255, 70, 92, 0.5);
-    }
-
-    .comment-list {
-        margin-top: 20px;
-        text-align: left;
-        font-style: italic;
-        font-weight: bold;
-        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                     -4px -4px 10px rgba(134, 123, 123, 0.61);
-    }
-
-    .comment-item {
-        background: linear-gradient(to right, #6a11cb, #2575fc);
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        color: #fff;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .comment-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .comment-icon {
-        font-size: 1.5em;
-        margin-right: 10px;
-    }
-
-    .comment-time {
-        font-size: 0.9em;
-        color: #ffd700;
-        margin-top: 10px;
-        text-align: right;
-        font-style: italic;
-        font-weight: bold;
-        text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
-                     -4px -4px 10px rgba(134, 123, 123, 0.61);
-    }
-
-    .comment-item:hover {
-        transform: scale(1.02);
-        transition: transform 0.3s ease;
-    }
-
-    /* Media Query untuk Android */
-    @media (max-width: 600px) {
-        h1 {
-            font-size: 1.5em;
-        }
-
-        .emoji {
-            font-size: 1.8em;
-        }
-
-        input, textarea {
-            font-size: 0.9em;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 0.9em;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: #443939;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            justify-content: center;
         }
 
         .container1 {
-            padding: 20px;
-        }
-    }
-</style>
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
+        }
+
+
+        h1 {
+            font-size: 2em;
+            color: #a8f574;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: #5e9408b9;
+            margin-bottom: 20px;
+        }
+
+        .emoji-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .emoji {
+            font-size: 2.0em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                -4px -4px 10px rgba(134, 123, 123, 0.61)
+        }
+
+        .emoji:hover {
+            transform: scale(1.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .like-count {
+            font-size: 1em;
+            margin-top: 5px;
+            color: #ffd700;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-size: 1em;
+            text-align: left;
+            display: block;
+            margin-bottom: 8px;
+            margin-top: 20px;
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 12px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px #ffd700;
+        }
+
+        button {
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            color: white;
+            font-size: 1em;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                -4px -4px 10px rgba(134, 123, 123, 0.61)
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(255, 70, 92, 0.5);
+        }
+
+        .comment-list {
+            margin-top: 20px;
+            text-align: left;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                -4px -4px 10px rgba(134, 123, 123, 0.61)
+        }
+
+        .comment-item {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .comment-icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .comment-time {
+            font-size: 0.9em;
+            color: #ffd700;
+            margin-top: 10px;
+            text-align: right;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 4px 4px 10px rgba(110, 71, 11, 0.7),
+                -4px -4px 10px rgba(134, 123, 123, 0.61)
+        }
+
+        .comment-item:hover {
+            transform: scale(1.02);
+            transition: transform 0.3s ease;
+        }
+
+
+        /* Media Query untuk Android */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .emoji {
+                font-size: 2em;
+            }
+
+            input,
+            textarea {
+                font-size: 0.9em;
+            }
+
+            button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
 
 
     <script async="" src="./sampulundangan_files/clarity.js.download"></script>
@@ -304,7 +314,7 @@
             <div class="d-flex">
                 
                 <nav>
-                    
+                   
                     <a href="login.html" style="border-radius: 6px; font-size: 1.1em; padding: 7px 12px 8px 12px !important; text-shadow: 4px 4px 10px rgba(243, 33, 33, 0.7), 
                                 -4px -4px 10px rgba(248, 102, 248, 0.3); animation: glow 2s infinite alternate;"  class="btn btn-primary btn-sm btn-daftar p-3 cta-button">Buat Undangan</a>
                 </nav>
@@ -328,8 +338,8 @@
                             </span><br> Tanpa Ribet!</h1>
                         <p style="font-size: 20px; color:#d9cfe9;">
                             Buat undangan online Kamu<strong class="text-primary"></strong> untuk
-                            Acara Kamu dalam waktu <strong class="text-primary">1 
-                                jam</strong>Create <strong class="text-primary">dibuatin admin </strong>bayar setelah
+                            Acara Kamu dalam waktu <strong class="text-primary">30
+                                menit</strong>Create <strong class="text-primary">dibuatin admin </strong>bayar setelah
                             jadi
                         </p>
                         <div style="height: 25px"></div>
@@ -480,7 +490,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID0.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1729581765.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -505,7 +515,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID0/index.html" button
+                                                        <a href="./ID0/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -519,7 +529,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID0/create.html" button
+                                                        <a href="./ID0/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -534,7 +544,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID1.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1729581804.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -559,7 +569,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID1/index.html" button
+                                                        <a href="./ID1/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -573,7 +583,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID1/create.html" button
+                                                        <a href="./ID1/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -588,7 +598,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID2.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728779034.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -613,7 +623,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID2/index.html" button
+                                                        <a href="./ID2/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -627,7 +637,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID2/create.html" button
+                                                        <a href="./ID2/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -642,7 +652,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID3.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1729581784.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -667,7 +677,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID3/index.html" button
+                                                        <a href="./ID3/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -681,7 +691,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID3/create.html" button
+                                                        <a href="./ID3/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -696,7 +706,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID4.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728779243.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -721,7 +731,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID4/index.html" button
+                                                        <a href="./ID4/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -735,7 +745,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID4/create.html" button
+                                                        <a href="./ID4/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -750,7 +760,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID5.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778603.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -775,7 +785,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID5/index.html" button
+                                                        <a href="./ID5/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -789,7 +799,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID5/create.html" button
+                                                        <a href="./ID5/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -804,7 +814,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID6.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778827.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -829,7 +839,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID6/index.html" button
+                                                        <a href="./ID6/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -843,7 +853,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID6/create.html" button
+                                                        <a href="./ID6/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -858,7 +868,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID7.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -883,7 +893,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID7/index.html" button
+                                                        <a href="./ID7/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -897,7 +907,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID7/create.html" button
+                                                        <a href="./ID7/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -910,7 +920,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID8.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -935,7 +945,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID8/index.html" button
+                                                        <a href="./ID8/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -949,7 +959,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID8/create.html" button
+                                                        <a href="./ID8/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -962,7 +972,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID9.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -987,7 +997,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID9/index.html" button
+                                                        <a href="./ID9/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1001,7 +1011,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID9/create.html" button
+                                                        <a href="./ID9/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1014,7 +1024,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID10.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1039,7 +1049,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID10/index.html" button
+                                                        <a href="./ID10/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1053,7 +1063,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID10/create.html" button
+                                                        <a href="./ID10/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1066,7 +1076,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID11.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1091,7 +1101,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID11/index.html" button
+                                                        <a href="./ID11/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1105,7 +1115,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID11/create.html" button
+                                                        <a href="./ID11/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1118,7 +1128,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID12.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1143,7 +1153,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID12/index.html" button
+                                                        <a href="./ID12/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1157,7 +1167,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID12/create.html" button
+                                                        <a href="./ID12/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1170,7 +1180,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID13.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1195,7 +1205,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID13/index.html" button
+                                                        <a href="./ID13/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1209,7 +1219,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID13/create.html" button
+                                                        <a href="./ID13/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1222,7 +1232,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID14.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1247,7 +1257,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID14/index.html" button
+                                                        <a href="./ID14/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1261,7 +1271,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID14/create.html" button
+                                                        <a href="./ID14/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1274,7 +1284,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID15.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1299,7 +1309,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID15/index.html" button
+                                                        <a href="./ID15/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1313,7 +1323,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID15/create.html" button
+                                                        <a href="./ID15/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1326,7 +1336,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID16.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1351,7 +1361,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID16/index.html" button
+                                                        <a href="./ID16/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1365,7 +1375,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID16/create.html" button
+                                                        <a href="./ID16/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1378,7 +1388,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID17.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1403,7 +1413,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID17/index.html" button
+                                                        <a href="./ID17/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1417,7 +1427,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID17/create.html" button
+                                                        <a href="./ID17/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1430,7 +1440,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID18.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1455,7 +1465,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID18/index.html" button
+                                                        <a href="./ID18/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1469,7 +1479,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID18/create.html" button
+                                                        <a href="./ID18/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1482,7 +1492,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID19.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1507,7 +1517,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID19/index.html" button
+                                                        <a href="./ID19/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1521,7 +1531,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID19/create.html" button
+                                                        <a href="./ID19/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1534,7 +1544,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID20.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1559,7 +1569,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID20/index.html" button
+                                                        <a href="./ID20/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1573,7 +1583,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID20/create.html" button
+                                                        <a href="./ID20/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1586,7 +1596,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID21.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
                                                 </div>
                                             </div>
                                             <div class="detail-thumbnail">
@@ -1610,7 +1620,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID21/index.html" button
+                                                        <a href="./ID21/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1624,7 +1634,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID21/create.html" button
+                                                        <a href="./ID21/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1637,7 +1647,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID22.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1662,7 +1672,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID22/index.html" button
+                                                        <a href="./ID22/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1676,7 +1686,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID22/create.html" button
+                                                        <a href="./ID22/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1689,7 +1699,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID23.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1714,7 +1724,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID23/index.html" button
+                                                        <a href="./ID23/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1728,7 +1738,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID23/create.html" button
+                                                        <a href="./ID23/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1741,7 +1751,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID24.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1766,7 +1776,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID24/index.html" button
+                                                        <a href="./ID24/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1780,7 +1790,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID24/create.html" button
+                                                        <a href="./ID24/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1793,7 +1803,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID25.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1818,7 +1828,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID25/index.html" button
+                                                        <a href="./ID25/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1832,7 +1842,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID25/create.html" button
+                                                        <a href="./ID25/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1845,7 +1855,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID26.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1870,7 +1880,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID26/index.html" button
+                                                        <a href="./ID26/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1884,7 +1894,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID26/create.html" button
+                                                        <a href="./ID26/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1897,7 +1907,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID27.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1922,7 +1932,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID27/index.html" button
+                                                        <a href="./ID27/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1936,7 +1946,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID27/create.html" button
+                                                        <a href="./ID27/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -1949,7 +1959,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID28.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -1974,7 +1984,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID28/index.html" button
+                                                        <a href="./ID28/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -1988,7 +1998,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID28/create.html" button
+                                                        <a href="./ID28/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2001,7 +2011,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID29.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2026,7 +2036,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID29/index.html" button
+                                                        <a href="./ID29/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2040,7 +2050,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID29/create.html" button
+                                                        <a href="./ID29/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2053,7 +2063,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID30.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2078,7 +2088,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID30/index.html" button
+                                                        <a href="./ID30/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2092,7 +2102,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID30/create.html" button
+                                                        <a href="./ID30/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2105,7 +2115,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID31.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2130,7 +2140,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID31/index.html" button
+                                                        <a href="./ID31/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2144,7 +2154,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID31/create.html" button
+                                                        <a href="./ID31/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2157,7 +2167,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID32.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2182,7 +2192,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID32/index.html" button
+                                                        <a href="./ID32/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2196,7 +2206,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID32/create.html" button
+                                                        <a href="./ID32/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2209,7 +2219,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID33.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2234,7 +2244,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID33/index.html" button
+                                                        <a href="./ID33/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2248,7 +2258,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID33/create.html" button
+                                                        <a href="./ID33/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2261,7 +2271,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID34.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2286,7 +2296,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID34/index.html" button
+                                                        <a href="./ID34/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2300,7 +2310,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID34/create.html" button
+                                                        <a href="./ID34/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2313,7 +2323,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID35.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2338,7 +2348,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID35/index.html" button
+                                                        <a href="./ID35/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2352,7 +2362,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID35/create.html" button
+                                                        <a href="./ID35/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2365,7 +2375,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID36.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2390,7 +2400,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID36/index.html" button
+                                                        <a href="./ID36/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2404,7 +2414,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID36/create.html" button
+                                                        <a href="./ID36/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
 
@@ -2418,7 +2428,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID37.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2443,7 +2453,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID37/index.html" button
+                                                        <a href="./ID37/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2457,7 +2467,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID37/create.html" button
+                                                        <a href="./ID37/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2470,7 +2480,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID38.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2495,7 +2505,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID38/index.html" button
+                                                        <a href="./ID38/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2509,7 +2519,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID38/create.html" button
+                                                        <a href="./ID38/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2522,7 +2532,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID39.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2547,7 +2557,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID39/index.html" button
+                                                        <a href="./ID39/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2561,7 +2571,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID39/create.html" button
+                                                        <a href="./ID39/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2574,7 +2584,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="img/ID40.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2599,7 +2609,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID40/index.html" button
+                                                        <a href="./ID40/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2613,7 +2623,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID40/create.html" button
+                                                        <a href="./ID40/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2626,7 +2636,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID41.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2651,7 +2661,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID41/index.html" button
+                                                        <a href="./ID41/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2665,7 +2675,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID41/create.html" button
+                                                        <a href="./ID41/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2678,7 +2688,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID42.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2703,7 +2713,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID42/index.html" button
+                                                        <a href="./ID42/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2717,7 +2727,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID42/create.html" button
+                                                        <a href="./ID42/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2730,7 +2740,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID43.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2755,7 +2765,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID43/index.html" button
+                                                        <a href="./ID43/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2769,7 +2779,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID43/create.html" button
+                                                        <a href="./ID43/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2782,7 +2792,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID44.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2807,7 +2817,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID44/index.html" button
+                                                        <a href="./ID44/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2821,7 +2831,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID44/create.html" button
+                                                        <a href="./ID44/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2834,7 +2844,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID45.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2859,7 +2869,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID45/index.html" button
+                                                        <a href="./ID45/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2873,7 +2883,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID45/create.html" button
+                                                        <a href="./ID45/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2886,7 +2896,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID46.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2911,7 +2921,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID46/index.html" button
+                                                        <a href="./ID46/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2925,7 +2935,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID46/create.html" button
+                                                        <a href="./ID46/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2938,7 +2948,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID47.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -2963,7 +2973,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID47/index.html" button
+                                                        <a href="./ID47/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -2977,7 +2987,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID47/create.html" button
+                                                        <a href="./ID47/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -2990,7 +3000,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID48.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3015,7 +3025,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID48/index.html" button
+                                                        <a href="./ID48/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3029,7 +3039,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID48/create.html" button
+                                                        <a href="./ID48/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3042,7 +3052,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID49.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3067,7 +3077,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID49/index.html" button
+                                                        <a href="./ID49/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3081,7 +3091,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID49/create.html" button
+                                                        <a href="./ID49/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3094,7 +3104,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID50.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3119,7 +3129,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID50/index.html" button
+                                                        <a href="./ID50/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3133,7 +3143,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID50/create.html" button
+                                                        <a href="./ID50/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3146,7 +3156,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID51.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3171,7 +3181,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID51/index.html" button
+                                                        <a href="./ID51/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3185,7 +3195,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID51/create.html" button
+                                                        <a href="./ID51/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3198,7 +3208,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID52.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3223,7 +3233,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID52/index.html" button
+                                                        <a href="./ID52/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3237,7 +3247,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID52/create.html" button
+                                                        <a href="./ID52/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3250,7 +3260,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID53.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3275,7 +3285,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID53/index.html" button
+                                                        <a href="./ID53/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3289,7 +3299,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID53/create.html" button
+                                                        <a href="./ID53/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3302,7 +3312,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID54.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3327,7 +3337,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID54/index.html" button
+                                                        <a href="./ID54/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3341,7 +3351,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID54/create.html" button
+                                                        <a href="./ID54/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3354,7 +3364,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID55.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3379,7 +3389,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID55/index.html" button
+                                                        <a href="./ID55/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3393,7 +3403,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID55/create.html" button
+                                                        <a href="./ID55/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3406,7 +3416,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID56.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3431,7 +3441,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID56/index.html" button
+                                                        <a href="./ID56/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3445,7 +3455,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID56/create.html" button
+                                                        <a href="./ID56/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3458,7 +3468,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID57.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3483,7 +3493,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID57/index.html" button
+                                                        <a href="./ID57/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3497,7 +3507,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID57/create.html" button
+                                                        <a href="./ID57/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3510,7 +3520,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID58.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3535,7 +3545,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID58/index.html" button
+                                                        <a href="./ID58/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3549,7 +3559,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID58/create.html" button
+                                                        <a href="./ID58/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3562,7 +3572,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID59.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3587,7 +3597,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID59/index.html" button
+                                                        <a href="./ID59/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3601,7 +3611,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID59/create.html" button
+                                                        <a href="./ID59/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3614,7 +3624,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID60.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3639,7 +3649,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID60/index.html" button
+                                                        <a href="./ID60/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3653,7 +3663,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID60/create.html" button
+                                                        <a href="./ID60/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3666,7 +3676,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID61.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3691,7 +3701,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID61/index.html" button
+                                                        <a href="./ID61/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3705,7 +3715,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID61/create.html" button
+                                                        <a href="./ID61/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3718,7 +3728,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID62.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3743,7 +3753,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID62/index.html" button
+                                                        <a href="./ID62/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3757,7 +3767,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID62/create.html" button
+                                                        <a href="./ID62/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3770,7 +3780,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID63.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3795,7 +3805,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID63/index.html" button
+                                                        <a href="./ID63/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3809,7 +3819,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID63/create.html" button
+                                                        <a href="./ID63/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3822,7 +3832,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID64.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3847,7 +3857,7 @@
                                                                     srcset=""></span></p>
                                                     </div>
                                                     <div class="col-12 action-btn order-2 order-md-2 d-grid d-md-block">
-                                                        <a href="./ID64/index.html" button
+                                                        <a href="./ID64/index.html"button
                                                             class="btn btn-secondary-cta btn-sm mt-2 preview"
                                                             target="_blank">
                                                             <svg style="margin-top: -2px;"
@@ -3861,7 +3871,7 @@
                                                                     d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                                             </svg>Preview</button></a>
 
-                                                        <a href="./ID64/create.html" button
+                                                        <a href="./ID64/create.html"button
                                                             class="btn btn-primary btn-sm mt-2 sebar"><img
                                                                 loading="lazy" alt="" srcset="">Coba</button></a>
                                                     </div>
@@ -3869,12 +3879,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="col-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-3">
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-3">
                                         <div class="card box-product">
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID65.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3926,7 +3936,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID66.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -3934,7 +3944,7 @@
                                                 <div class="row justify-content-between">
                                                     <div class="col-12 col-md-12 ">
                                                         <p class="m-0 text-muted text-capitalize namaKategori-home">
-                                                            Harga premium</p>
+                                                            Harga Premium</p>
                                                         <p class="namaTemplate"
                                                             style="font-weight: 600; margin-bottom: -9px;">NO. ID 66
                                                         </p>
@@ -3978,7 +3988,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID67.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4030,7 +4040,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID68.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4082,7 +4092,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID69.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4134,7 +4144,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID70.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4186,7 +4196,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID71.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4238,7 +4248,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID72.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4290,7 +4300,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID73.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4342,7 +4352,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID74.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4394,7 +4404,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID75.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4441,7 +4451,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                     <div class="col-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-3">
+                                   
+                                    <div class="col-6 col-md-6 col-lg-4 col-xl-4 col-xxl-3 mt-3">
                                         <div class="card box-product">
                                             <div class="img-container">
 
@@ -4498,7 +4509,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID77.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4602,7 +4613,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID79.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4654,7 +4665,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID80.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -4706,7 +4717,7 @@
                                             <div class="img-container">
 
                                                 <div class="thumbnail-img lazy-bg" data-bg="./img/ID81.png"
-                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;https://sin1.contabostorage.com/2db3bf1e16cd47a08843bb881e39cce7:indoinvite-staging/indoinvite-staging/indoinvite-staging/nikah/upload/media/1728778656.webp&quot;);">
+                                                    style="background-color: rgb(224, 224, 224); background-size: cover; background-position: center center; transition: background-image 0.5s ease-in-out; background-image: url(&quot;#&quot;);">
 
                                                 </div>
                                             </div>
@@ -6502,7 +6513,7 @@
                         clip-rule="evenodd"></path>
                 </svg>
 
-                <p style="color: #fff">#</p>
+                <p style="color: #fff">@</p>
                 <div class="position-absolute"
                     style="bottom: 15px; right: -10px; width: 0; height: 0;
                 border-top: 10px solid transparent; border-left: 10px solid #ff7f00; border-bottom: 10px solid transparent;">
