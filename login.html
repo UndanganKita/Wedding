@@ -70,6 +70,55 @@
       text-align: center;
       color: red;
     }
+
+    /* Style untuk Lupa Password */
+    .forgot-password {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    .forgot-password a {
+      color: #6e8efb;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    /* Style untuk Modal Lupa Password */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      max-width: 400px;
+      border-radius: 5px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
      /* Optimasi untuk perangkat kecil */
      @media (max-width: 480px) {
       body {
@@ -123,11 +172,33 @@
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required />
       </div>
+      <div class="forgot-password">
+        <a href="#" id="forgot-password-link">Lupa Password?</a>
+      </div>
       <button type="submit" id="submit-btn">Login</button>
       <div class="message" id="message"></div>
     </form>
     <div class="toggle">
       <span id="toggle-text">Belum punya akun?</span> <a href="#" id="toggle-link">Daftar di sini</a>
+    </div>
+  </div>
+
+  <!-- Modal Lupa Password -->
+  <div id="forgotPasswordModal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <h2>Reset Password</h2>
+      <p>Masukkan email dan password baru Anda.</p>
+      <div class="form-group">
+        <label for="reset-email">Email</label>
+        <input type="email" id="reset-email" name="reset-email" required />
+      </div>
+      <div class="form-group">
+        <label for="new-password">Password Baru</label>
+        <input type="password" id="new-password" name="new-password" required />
+      </div>
+      <button id="reset-password-btn">Ubah Password</button>
+      <div class="message" id="reset-message"></div>
     </div>
   </div>
 
@@ -139,6 +210,57 @@
     const submitBtn = document.getElementById('submit-btn');
     const messageDiv = document.getElementById('message');
     let isSignup = false;
+
+    // Forgot Password Functionality
+    const forgotPasswordLink = document.getElementById('forgot-password-link');
+    const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+    const resetPasswordBtn = document.getElementById('reset-password-btn');
+    const resetMessageDiv = document.getElementById('reset-message');
+    const closeBtn = document.querySelector(".close");
+
+    forgotPasswordLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      forgotPasswordModal.style.display = "block";
+    });
+
+    closeBtn.addEventListener('click', () => {
+      forgotPasswordModal.style.display = "none";
+    });
+
+    window.addEventListener('click', (event) => {
+      if (event.target == forgotPasswordModal) {
+        forgotPasswordModal.style.display = "none";
+      }
+    });
+
+    resetPasswordBtn.addEventListener('click', () => {
+      const resetEmail = document.getElementById('reset-email').value;
+      const newPassword = document.getElementById('new-password').value;
+
+      // Kirim permintaan reset password ke backend (Google Apps Script)
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new URLSearchParams({
+          action: 'resetPassword',
+          email: resetEmail,
+          newPassword: newPassword
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        resetMessageDiv.textContent = data.message;
+        if (data.status === 'success') {
+          // Optionally, close the modal after successful request
+          forgotPasswordModal.style.display = "none";
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        resetMessageDiv.textContent = 'Terjadi kesalahan. Silakan coba lagi.';
+      });
+    });
+
+
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzRBvZOqEu6p4FCiEj5PF5RI3z2wxDnp2Eqh8I50qmPPlib_WvTRnI16GTyjYuXD29m/exec'; // Replace with your script URL
 
